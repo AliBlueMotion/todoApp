@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="preloader" id="preloader">
+    <div class="loader-container">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-center">📝</div>
+        <div class="loader-text">LOADING</div>
+    </div>
+</div>
+<div class="particles" id="particles"></div>
+
+<div class="container">
+    <div>ToDo приложение</div>
+    <div>список задач на сегодня</div>
+
+    <div class="card">
+        <ul id="tasksList" class="list-group list-group-flush">
+            <li id="emptyList" class="list-group-item empty-list">
+                <div style="font-size: 48px;">📋</div>
+                <div class="empty-list__title">Список дел пуст</div>
+            </li>
+        </ul>
+    </div>
+    <div class="card">
+        <div class="card-header">Добавить новую задачу</div>
+        <div class="card-body">
+            <form id="form">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="taskInput" placeholder="Текст задачи" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Добавить</button>
+            </form>
+        </div>
+    </div>
+
+    <button id="removeDoneTasks" class="btn btn-secondary">Удалить выполненные задачи</button>
+</div>
+
+<script src="particles.js"> </script>
+<script src="preloader.js"> </script>
+<script src="main.js"></script>
+</body>
+</html>
